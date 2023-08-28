@@ -1,14 +1,40 @@
-const PORT= process.env.PORT ||3001; 
-const fs= require('fs');
-const path= require('path');
-// code lines 1-4 initializes the path and set up the node js application and the file system to use 3001 as the default port number.
+const express = require('express');
+const path = require('path');
+// Helper fs functions
+const {readFromFile, writeToFile, readAndAppend, readAndDelete} = require('./utils/helpers');
+const {v4: uuidv4} = require("uuid")
+const db = require('./db/db.json');
 
-const express= require('express');
-const app= express();
+const PORT = 3001;
 
-const allNotes = require("./Develop/db/db.json"); 
+const app = express();
+
 app.use(express.json());
-app.use(express.static("public")); 
-    // comment here
-    
-  app.get("/api/notes,(req,res) => { res.json(allNotes.slice(1)); });
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static('public'));
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/index.html"))
+})
+
+app.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/notes.html"))
+})
+
+app.get("/api/notes", (req, res) => {
+
+})
+
+app.post("/api/notes", (req, res) => {
+
+})
+
+app.delete("/api/notes/:id", (req, res) => {
+
+})
+
+
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}`)
+);
