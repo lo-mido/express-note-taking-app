@@ -5,7 +5,10 @@
 
   ## Table of Contents
     
-  - [Description](#description)  
+  - [Description](#description) 
+  - [Motivation](#motivation) 
+  - [Challenge](#challenge)
+  - [What I Learned](#what-i-learned) 
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
@@ -58,7 +61,7 @@ To install and test the Note Taker application locally, follow these steps:
 
 ## Mock-Up
 
-![Mock-Up Image](mockup.png)
+![Mock-Up Image](./public/assets/images/notes4.png.png)
 
 The mock-up images demonstrate the appearance and functionality of the application, showcasing how existing notes are listed on the left with fields for adding new notes on the right.
 
@@ -68,8 +71,6 @@ You can access the live version of the deployed Note Taker application at [Herok
 
 ## GitHub Repository
 
-Check out the code on [GitHub](https://github.com/lo-mido/express-note-taking-app). Remember to include a README in your repository that provides clear project description, instructions, and any additional information.
-
-
+Check out the code on [GitHub](https://github.com/lo-mido/express-note-taking-app). 
 ---
 
