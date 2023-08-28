@@ -27,7 +27,11 @@ app.get("/api/notes", (req, res) => {
 })
 
 app.post("/api/notes", (req, res) => {
-    
+    const note = req.body;
+    note.id = uuidv4();
+
+    readAndAppend(note, "./db/db.json")
+    res.json(note)
 })
 
 app.delete("/api/notes/:id", (req, res) => {
