@@ -1,9 +1,8 @@
 const express = require('express');
 const path = require('path');
 // Helper fs functions
-const {readFromFile, writeToFile, readAndAppend, readAndDelete} = require('./utils/helpers');
+const {readFromFile, readAndAppend, readAndDelete} = require('./utils/helpers');
 const {v4: uuidv4} = require("uuid")
-const db = require('./db/db.json');
 
 const PORT = 3001;
 
@@ -38,7 +37,6 @@ app.delete("/api/notes/:id", (req, res) => {
     readAndDelete(req.params.id, "./db/db.json")
     res/json({ok: true})
 })
-
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT}`)
