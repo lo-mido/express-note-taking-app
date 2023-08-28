@@ -35,7 +35,8 @@ app.post("/api/notes", (req, res) => {
 })
 
 app.delete("/api/notes/:id", (req, res) => {
-
+    readAndDelete(req.params.id, "./db/db.json")
+    res/json({ok: true})
 })
 
 
