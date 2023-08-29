@@ -1,7 +1,7 @@
 const fs = require("fs");
 const util = require("util");
 
-// Promise version of fs.readFile
+// Promise version of fs.readFile to copy from server js file...made into a separate file...copied code from course gitlab terminal...
 const readFromFile = util.promisify(fs.readFile);
 
 const writeToFile = (destination, content) =>
